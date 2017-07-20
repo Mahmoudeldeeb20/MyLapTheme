@@ -1,0 +1,1580 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Hind', sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* Navbar With Absolute Position */
+
+
+/*
+.nav {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+*/
+
+
+/* Navbar With Fixed Position */
+
+.nav {
+    position: absolute;
+    width: 100%;
+    background: transparent;
+    height: 13%;
+    z-index: 999;
+    overflow: hidden;
+    transition: all ease-out 0.8s;
+}
+
+
+/* Navbar Left Side */
+
+.left {
+    float: left;
+    width: 25%;
+    padding: 2%;
+    padding-left: 5%;
+}
+
+.left a {
+    text-decoration: none;
+}
+
+.left a p {
+    display: inline;
+    color: white;
+    font-size: 15pt;
+    vertical-align: middle;
+    padding: 1%;
+}
+
+.left a p span {
+    display: inline;
+    color: white;
+    font-weight: bold;
+    font-size: 15pt;
+}
+
+.fa-flask {
+    display: inline;
+    color: white;
+    background: #03a9f4;
+    padding: 1%;
+    vertical-align: middle;
+    font-size: 15pt;
+    padding: 2%;
+    border-radius: 5%;
+}
+
+
+/* Navbar Right Side */
+
+.right {
+    float: right;
+    width: 68%;
+    padding-top: 1%;
+}
+
+.nav-bar {
+    width: 100%;
+}
+
+.right ul li {
+    display: inline;
+    list-style: none;
+    text-align: center;
+}
+
+.right ul li a {
+    text-decoration: none;
+    padding: 2%;
+    text-align: center;
+    color: white;
+    transition: all 0.3s linear;
+    border-bottom: 2px solid transparent;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.right ul li a:hover {
+    color: #03a9f4;
+    border-bottom: 2px solid #03a9f4;
+}
+
+.nav-search {
+    color: white;
+    cursor: pointer;
+    vertical-align: middle;
+    padding: 0.9% 0.5%;
+}
+
+.nav-search:hover {
+    color: #03a9f4;
+}
+
+input[type='search'] {
+    padding: 1% 0.5%;
+    border-radius: 3px 10px 3px 10px;
+    border: none;
+    opacity: 0.7;
+    text-align: center;
+    width: 18%;
+    color: black
+}
+
+input[type='search']::-webkit-input-placeholder {
+    color: black;
+    letter-spacing: 2px;
+    font-weight: bold;
+    opacity: 0.4;
+}
+
+input[type='search']:focus {
+    border: none;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.search {
+    visibility: hidden;
+}
+
+
+/* Header & Slider */
+
+.header {
+    z-index: -1;
+}
+
+.slider {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    text-align: center;
+    margin: auto;
+}
+
+.slider img {
+    width: 100%;
+    position: relative;
+}
+
+.slider:after {
+    content: "";
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(20, 21, 21, 0.5) 100%);
+}
+
+.img-slider:nth-child(2) {
+    transform: translate(0, -101%);
+    z-index: -1;
+}
+
+.img-slider:nth-child(3) {
+    transform: translate(0, -202%);
+    z-index: -2;
+}
+
+.img-slider:nth-child(4) {
+    transform: translate(0, -303%);
+    z-index: -3;
+}
+
+.slider div p {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    top: 25%;
+    color: white;
+    font-size: 20pt;
+}
+
+.slider div p span {
+    font-weight: bolder;
+}
+
+.slider div h2 {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    top: 30%;
+    color: white;
+    font-size: 30pt;
+}
+
+.slider div div {
+    width: 50%;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    top: 48%;
+    left: 25%;
+    color: white;
+    font-size: 10pt;
+    margin: auto;
+}
+
+.slider div button {
+    width: 10%;
+    height: 7%;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+    top: 60%;
+    left: 45%;
+    color: white;
+    font-size: 10pt;
+    margin: auto;
+    background: #03a9f4;
+    border: none;
+    border-radius: 2px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease-out;
+}
+
+.slider button:hover {
+    border: 1px solid white;
+    background: rgba(2, 121, 175, 0.2);
+}
+
+
+/* Media Query To Make Header & Nav-Bav Resbonsive */
+
+@media (min-width: 500px) and (max-width: 910px) {
+    .nav {
+        height: 10%;
+    }
+    .left a {
+        text-decoration: none;
+    }
+    .left a p,
+    .left a p span {
+        font-size: 10pt;
+    }
+    .right {
+        display: none;
+    }
+    .nav-bar {
+        width: 100%;
+    }
+    .right ul li {
+        display: inline;
+        list-style: none;
+        text-align: center;
+    }
+    .right ul li a {
+        padding: 1% 2%;
+        font-size: 5pt;
+    }
+    .right ul li a:hover {
+        border-bottom: 2px solid transparent;
+    }
+    .nav-search {
+        display: none;
+    }
+    .search {
+        display: none;
+    }
+    .header {
+        z-index: -1;
+    }
+    .slider {
+        height: 300px;
+    }
+    .slider div p {
+        top: 12%;
+        font-size: 12pt;
+    }
+    .slider div p span {
+        font-weight: bolder;
+    }
+    .slider div h2 {
+        top: 16%;
+        font-size: 18pt;
+    }
+    .slider div div {
+        top: 25%;
+        left: 25%;
+        font-size: 9pt;
+    }
+    .slider div button {
+        width: 10%;
+        height: 5%;
+        top: 40%;
+        font-size: 6pt;
+    }
+}
+
+
+/* End Media Query Header & Nav-Bav */
+
+
+/* Web Specification*/
+
+.web-specification {
+    width: 100%;
+    min-height: 345px;
+}
+
+.web-specification div {
+    width: 21%;
+    height: 96%;
+    background: #f7fcff;
+    float: left;
+    padding: 2% 2% 2% 2%;
+    text-align: center;
+    transition: all 0.5s ease-out;
+}
+
+.even {
+    background-color: #f0fafe !important;
+}
+
+.web-specification div:hover {
+    background-color: rgba(44, 196, 203, 0.2) !important;
+}
+
+.web-specification div section {
+    width: 60px;
+    margin: auto;
+    height: 60px;
+    background: #03a9f4;
+    text-align: center;
+}
+
+.web-specification div section i {
+    color: white;
+    font-size: 2em;
+    margin-top: 15px;
+}
+
+.web-specification div p {
+    color: black;
+    font-size: 15pt;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.web-specification div span {
+    color: #8a8c8d;
+    font-size: 11pt;
+    display: block;
+    margin-bottom: 15%;
+}
+
+.web-specification div a {
+    color: #03a9f4;
+    font-size: 12pt;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bolder;
+    transition: all 0.3s ease-out;
+}
+
+.web-specification div a:hover {
+    color: #ff9800;
+}
+
+
+/* Media Query To Web Specification Resbonsive */
+
+@media (min-width: 500px) and (max-width: 910px) {
+    .web-specification {
+        min-height: 225px;
+    }
+    .web-specification div section {
+        width: 40px;
+        height: 40px;
+    }
+    .web-specification div section i {
+        font-size: 15pt;
+        line-height: 10px;
+    }
+    .web-specification div p {
+        font-size: 10pt;
+    }
+    .web-specification div span {
+        font-size: 7pt;
+        margin-bottom: 5%;
+    }
+    .web-specification div a {
+        font-size: 8pt;
+    }
+}
+
+
+/* End Media Query web Specification */
+
+
+/* OUR PROFOLIO */
+
+.our-portfolio {
+    width: 100%;
+}
+
+.portfolio-header {
+    width: 100%;
+    text-align: center;
+    margin: 2% auto 0 0;
+}
+
+.portfolio-header h1 {
+    margin-bottom: 1%;
+}
+
+.portfolio-header p {
+    width: 55%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 1%;
+}
+
+.portfolio-category {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.selector {
+    width: 100%;
+    margin: 1% auto 2% auto;
+    text-align: center;
+}
+
+.selector ul li {
+    list-style: none;
+    display: inline;
+    cursor: pointer;
+    margin: 0 1%;
+    color: #09abf4;
+    font-weight: bolder;
+    transition: all ease-out 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.selector ul li:hover {
+    color: black;
+    border-bottom: 2px solid #09abf4;
+}
+
+.selector-active {
+    color: #ffa116 !important;
+    border-bottom: 2px solid transparent !important;
+}
+
+.selector-active:hover {
+    color: #ffa116 !important;
+    border-bottom: 2px solid #ffa116 !important;
+}
+
+.portfolio-images {
+    width: 100%;
+}
+
+.images {
+    height: auto;
+    width: 25%;
+    float: left;
+}
+
+.portfolio-images div img {
+    width: 100%;
+    height: 100%;
+}
+
+.images-group img:nth-child(1) {
+    width: 50%;
+    height: 50%;
+    float: left;
+}
+
+.images-group img:nth-child(2) {
+    width: 50%;
+    height: 50%;
+    float: left;
+}
+
+.images-group img:nth-child(3) {
+    width: 100%;
+    height: 50%;
+}
+
+.search-link {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    width: 25%;
+    height: 26.5%;
+    margin-top: -13.2%;
+    display: none;
+}
+
+.search-link i {
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 15pt;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 195%;
+    cursor: pointer;
+    margin-top: 19.5%;
+    transition: all ease-out 0.5s;
+}
+
+.search-link i:nth-child(1) {
+    background: #03a9f4;
+    margin-right: 3%;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.search-link i:nth-child(1):hover {
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    background: rgba(44, 62, 80, 0.5) !important;
+}
+
+.search-link i:nth-child(2) {
+    background: #ff9800;
+    line-height: 220%;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.search-link i:nth-child(2):hover {
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    background: rgba(44, 62, 80, 0.5) !important;
+}
+
+.portfolio-category a {
+    color: #03a9f4;
+    text-decoration: none;
+    transition: all ease-out 0.3s;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.portfolio-category a:hover {
+    color: #ff9902;
+}
+
+.portfolio-category a .fa-repeat {
+    color: #03a9f4;
+    cursor: pointer;
+    transition: all ease-out 1s;
+    margin: 1.5% 0% 3.5% 0;
+}
+
+.portfolio-category a .fa-repeat:hover {
+    transform: rotate(540deg);
+    color: #ff9902;
+}
+
+
+/* Media Query To Our Portfolio Resbonsive */
+
+@media (min-width: 500px) and (max-width: 910px) {
+    .portfolio-header h1 {
+        font-size: 15pt;
+    }
+    .portfolio-header p {
+        font-size: 8pt;
+    }
+    .selector ul li {
+        font-size: 9pt;
+    }
+    .selector ul li:hover {
+        border-bottom: 2px solid transparent;
+    }
+    .selector-active:hover {
+        border-bottom: 2px solid transparent !important;
+    }
+    .images {
+        height: auto;
+        width: 25%;
+        float: left;
+    }
+    .search-link {
+        display: none;
+    }
+    .search-link i {
+        display: none;
+    }
+    .portfolio-category a {
+        display: none;
+    }
+}
+
+
+/* End Media Query Our Portfolio */
+
+
+/* Cover Two */
+
+
+/*
+.cover-two {
+    background-image: url(../img/Cover-2.png);
+    height: 345px;
+    background-size: cover;
+    background-position: 0 35%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+*/
+
+.cover-two {
+    height: 345px;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 2%;
+    text-align: center;
+}
+
+.cover-two .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 33, 33, 0.75);
+}
+
+.cover-two img {
+    margin-top: -43%;
+    opacity: 0.5;
+}
+
+.overlay div {
+    position: relative;
+    z-index: 5;
+    top: 30%;
+}
+
+.overlay div p {
+    margin: auto;
+    width: 50%;
+    color: white;
+    font-size: 13pt;
+    margin-bottom: 2%;
+}
+
+.cover-two div div button {
+    width: 10%;
+    height: 44px;
+    text-align: center;
+    color: white;
+    font-size: 10pt;
+    background: #03a9f4;
+    border: none;
+    border-radius: 2px;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease-out;
+}
+
+.cover-two div div button:hover {
+    border: 1px solid white;
+    background: rgba(2, 121, 175, 0.2);
+}
+
+
+/* Media Query To Our Cover Two */
+
+@media (min-width: 500px) and (max-width: 910px) {
+    .cover-two {
+        height: 245px;
+    }
+    .cover-two .overlay {
+        background: rgba(33, 33, 33, 1);
+    }
+    .cover-two img {
+        margin-top: -63%;
+        opacity: 0.4;
+    }
+    .overlay div p {
+        font-size: 10pt;
+    }
+    .cover-two div div button {
+        width: 11%;
+        height: 30px;
+        font-size: 9pt;
+    }
+}
+
+
+/* End Media Query Cover Two */
+
+
+/* Latest News */
+
+.latest-news {
+    width: 100%;
+    text-align: center;
+}
+
+.latest-news h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.latest-news p {
+    margin: auto;
+    width: 55%;
+    text-align: center;
+    color: #212121;
+}
+
+.news-images {
+    width: 80%;
+    margin: auto;
+    height: 29em;
+}
+
+.news-images img {
+    width: 100%;
+    transition: all ease-out 0.5s;
+}
+
+.news-images img:hover {
+    opacity: 0.2;
+}
+
+.news-images div {
+    width: 30%;
+    float: left;
+    margin: 3% 3% 3% 0;
+    transition: all ease-out 0.5s;
+    transform: perspective(50px);
+}
+
+.news-images div:hover {
+    transform: translate3d(0, 3px, 2px);
+}
+
+.news-images div span {
+    display: block;
+    text-align: center;
+    color: #727272;
+    font-size: 12pt;
+}
+
+.news-images div p {
+    width: 100%;
+    text-align: center;
+    font-size: 13pt;
+    color: #03a9f4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all ease-out 0.3s;
+    font-weight: bold;
+}
+
+.news-images div p:hover {
+    color: #ff9800;
+}
+
+
+/* Media Query To Our Latest News */
+
+@media (min-width: 500px) and (max-width: 910px) {
+    .latest-news h2 {
+        font-size: 12pt;
+    }
+    .latest-news p {
+        font-size: 8pt;
+        margin: -5px auto;
+    }
+    .news-images {
+        width: 70%;
+        height: 18em;
+    }
+    .news-images img:hover {
+        opacity: 0.2;
+    }
+    .news-images div span {
+        font-size: 8pt;
+    }
+    .news-images div p {
+        font-size: 8pt;
+    }
+}
+
+
+/* End Media Query Latest News */
+
+
+/* Our Team */
+
+.our-team {
+    width: 96%;
+    height: 690px;
+    background: #f0fafe;
+    padding: 2%;
+}
+
+.team-header {
+    text-align: center;
+}
+
+.team-header h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.team-header p {
+    color: #212121;
+    width: 60%;
+    margin: auto;
+    opacity: 0.75;
+    font-size: 12.5pt;
+}
+
+.hide {
+    display: none;
+}
+
+.team-members {
+    width: 90%;
+    margin: auto;
+    margin-top: 2%;
+}
+
+.team-members .member {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+.team-members .member .member-img img {
+    width: 90%;
+    height: 90%;
+    margin-bottom: 7%;
+}
+
+.team-members .member .member-img .content {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 17.5%;
+    height: 305px;
+    margin-left: 1%;
+    padding: 2% 1%;
+    display: none;
+}
+
+.content p {
+    color: white !important;
+    font-size: 13pt;
+    width: 90%;
+    margin: auto;
+}
+
+.content p span {
+    color: #b3e5fc !important;
+    font-weight: normal !important;
+    text-transform: none !important;
+}
+
+.content .fa {
+    color: white;
+    padding: 1%;
+    background: #03a9f4;
+    height: 25px;
+    width: 25px;
+    border-radius: 7%;
+    line-height: 1.7;
+    margin-top: 20%;
+    transition: all ease-out 0.5s;
+}
+
+.content .fa:hover {
+    background: #ff9800;
+}
+
+.team-members .member span {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.team-members .member p {
+    color: #727272;
+}
+
+
+/* Media Query To Our Team */
+
+@media (min-width: 500px) and (max-width: 910px) {
+    .our-team {
+        height: 400px;
+    }
+    .team-header h1 {
+        font-size: 15pt;
+    }
+    .team-header p {
+        font-size: 9pt;
+    }
+    .team-members .member .member-img img {
+        width: 90%;
+        height: 90%;
+    }
+    .team-members .member .member-img .content {
+        display: none;
+        background: transparent;
+    }
+    .content p {
+        display: none;
+    }
+    .content .fa {
+        display: none;
+    }
+    .content .fa:hover {
+        display: none;
+    }
+    .team-members .member span {
+        font-size: 9pt;
+    }
+    .team-members .member p {
+        font-size: 8pt;
+    }
+}
+
+
+/* End Media Query Our Team */
+
+
+/* Our Skills */
+
+.skills {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 3%;
+    padding: 2% 0;
+}
+
+.skills .header {
+    margin: auto;
+    width: 55%;
+}
+
+.skills .header p {
+    color: #212121;
+}
+
+.skills-progress {
+    width: 70%;
+    display: inline-block;
+}
+
+.skills-progress section {
+    width: 50%;
+    text-align: left;
+    float: left;
+}
+
+.skills-progress section .category h4 {
+    width: 100%;
+    background: white;
+}
+
+.skills-progress section .category h4 span {
+    float: right;
+}
+
+.skills-progress section .category {
+    margin-bottom: -3%;
+}
+
+.progress,
+.category {
+    width: 96%;
+    background: #b3e5fc;
+}
+
+.progress div {
+    background: #03a9f4;
+}
+
+
+/* Media Query To Our Skills */
+
+@media (min-width: 500px) and (max-width: 910px) {
+    .skills .header {
+        width: 80%;
+    }
+    .skills .header h1 {
+        font-size: 15pt;
+    }
+    .skills .header p {
+        font-size: 8pt;
+    }
+    .skills-progress {
+        width: 90%;
+    }
+}
+
+
+/* End Media Query Our Skills */
+
+
+/* Statues */
+
+.statues {
+    width: 80%;
+    background: #ff9800;
+    padding: 5% 10%;
+    text-align: center;
+}
+
+.statues .statues-result {
+    width: 20%;
+    display: inline-block;
+    margin: auto;
+    text-align: center;
+}
+
+.statues .statues-result i {
+    background: white;
+    color: #ff9800;
+    font-size: 20pt;
+    border-radius: 2px;
+    padding: 1%;
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.statues .statues-result div {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5%;
+    text-align: left;
+}
+
+.statues .statues-result h3 {
+    margin: 0;
+    color: white;
+    font-weight: lighter;
+    letter-spacing: 5px;
+    margin-bottom: -3%;
+}
+
+.statues .statues-result span {
+    font-size: 10pt;
+    display: block;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+/* Media Query To  Statues */
+
+@media (min-width: 500px) and (max-width: 910px) {
+    .statues {
+        width: 100%;
+        padding: 3% 6%;
+        box-sizing: border-box;
+    }
+    .statues .statues-result i {
+        font-size: 15pt;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .statues-result h3 {
+        font-size: 9pt;
+        margin: 3% 0;
+        text-align: center
+    }
+    .statues .statues-result span {
+        font-size: 7pt;
+        display: block;
+        text-align: center
+    }
+}
+
+
+/* End Media Query  Statues */
+
+
+/* Our Team Two */
+
+.our-team-two {
+    width: 90%;
+    padding: 2% 5%;
+}
+
+.our-team-two .header {
+    width: 55%;
+    margin: auto;
+    text-align: center;
+}
+
+.our-team-two .header h1 {
+    letter-spacing: 3px;
+    margin: 2% 0% -2% 0%;
+}
+
+.our-team-two .quotes {
+    width: 30%;
+    display: inline-block;
+}
+
+.our-team-two header {
+    text-align: center;
+    margin-top: 3%;
+}
+
+.our-team-two .quotes h1 {
+    font-size: 50pt;
+    color: #03a9f4;
+    margin: 0;
+    margin-bottom: -10%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.our-team-two .quotes p {
+    text-align: center;
+    font-style: italic;
+}
+
+.our-team-two .quotes .quotes-img {
+    text-align: center;
+}
+
+.our-team-two .quotes .quotes-img img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.our-team-two .quotes .quotes-img div {
+    display: inline-block;
+    margin-left: 3%;
+    vertical-align: middle;
+}
+
+.our-team-two .quotes .quotes-img div h3 {
+    margin-bottom: -10%;
+    letter-spacing: 3px;
+}
+
+.our-team-two .quotes .quotes-img div p {
+    font-style: normal;
+    color: #727272;
+}
+
+
+/* Media Query To  Our Team Two */
+
+@media (min-width: 500px) and (max-width: 910px) {
+    .our-team-two .header h1 {
+        letter-spacing: 1px;
+        font-size: 13pt;
+    }
+    .our-team-two .header p {
+        font-size: 8pt;
+    }
+    .our-team-two .quotes h1 {
+        font-size: 30pt;
+    }
+    .our-team-two .quotes p {
+        font-size: 8pt;
+    }
+    .our-team-two .quotes .quotes-img img {
+        width: 35%;
+    }
+    .our-team-two .quotes .quotes-img div h3 {
+        letter-spacing: 1px;
+        font-size: 11pt;
+    }
+    .our-team-two .quotes .quotes-img div p {
+        font-size: 9pt;
+    }
+}
+
+
+/* End Media Query Our Team Two */
+
+
+/* Our Customers */
+
+.our-customers {
+    background-image: url("../img/cover-3.png");
+    background-size: cover;
+    padding: 5%;
+    height: 400px;
+    box-sizing: border-box;
+}
+
+.our-customers::before {
+    content: "";
+    position: absolute;
+    background: black;
+    width: 100%;
+    height: inherit;
+    margin-left: -5%;
+    margin-top: -5%;
+    opacity: 0.7;
+}
+
+.our-customers .header {
+    width: 61%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.our-customers .header h1 {
+    font-size: 20pt;
+    color: white;
+}
+
+.our-customers .header p {
+    color: white;
+}
+
+.our-customers .brand {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.our-customers .brand img {
+    margin: 3% 3%;
+    opacity: 0.65;
+    vertical-align: middle;
+    padding: 1%;
+    border: 1px solid transparent;
+    transition: all ease-out 0.5s;
+    width: 10%;
+}
+
+.our-customers .brand img:hover {
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    opacity: 1;
+    border-radius: 2px;
+}
+
+
+/* Media Query To  Our Customers */
+
+@media (min-width: 500px) and (max-width: 910px) {
+    .our-customers {
+        height: 250px;
+    }
+    .our-customers .header h1 {
+        font-size: 15pt;
+    }
+    .our-customers .header p {
+        font-size: 8pt;
+    }
+}
+
+
+/* End Media Query Our Customers */
+
+
+/* My Lap Info */
+
+.mylap-info {
+    width: 100%;
+    background: #212121;
+    padding: 3% 1%;
+}
+
+.mylap-info section {
+    width: 26%;
+    display: inline-block;
+    margin-left: 3%;
+    vertical-align: top;
+    transition: all ease-out 0.5s;
+    padding: 1%;
+    border: 1px inset transparent;
+}
+
+.mylap-info section:hover {
+    background: #2d2c2c;
+    border: 1px inset #1f1e1e;
+}
+
+.mylap-info .mylap-about h3,
+.mylap-info .mylap-about h3 span {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: normal;
+    color: white;
+}
+
+.mylap-info .mylap-about h3 span {
+    color: #b3e5fc;
+}
+
+.mylap-info .mylap-about p {
+    color: white;
+    text-align: justify;
+}
+
+.mylap-info .mylap-about .lets-social .fa {
+    color: white;
+    padding: 1%;
+    background: #03a9f4;
+    height: 25px;
+    width: 25px;
+    border-radius: 7%;
+    line-height: 25px;
+    transition: all ease-out 0.5s;
+    text-align: center;
+}
+
+.mylap-info .mylap-about .lets-social .fa:hover {
+    background: #ff9800;
+}
+
+.latest-tweet h3 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.latest-tweet p {
+    color: white;
+    opacity: 0.75;
+}
+
+.latest-tweet p .fa {
+    color: #0b87bf;
+}
+
+.latest-tweet p span:nth-of-type(1) {
+    color: #03a9f4;
+}
+
+.latest-tweet p span:nth-of-type(2) {
+    color: #727272;
+}
+
+.latest-tweet p:nth-of-type(2) span:nth-of-type(1) {
+    color: #ff9902;
+}
+
+.latest-blog h3 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.latest-blog .blog img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.latest-blog .blog div {
+    display: inline-block;
+    width: 77%;
+    vertical-align: middle;
+    margin-left: 3%
+}
+
+.latest-blog .blog p {
+    color: #03a9f4;
+    font-size: 11pt;
+    vertical-align: middle;
+    text-transform: lowercase;
+    transition: all ease-out 0.5s;
+}
+
+.latest-blog .blog p:hover {
+    color: #ff9800;
+}
+
+
+/* Media Query To  My Lap Info */
+
+@media (min-width: 500px) and (max-width: 910px) {
+    .mylap-about,
+    .latest-tweet,
+    .latest-blog {
+        height: 330px;
+    }
+    .mylap-info section:hover {
+        background: rgba(45, 44, 44, 0.5);
+        border: 1px inset rgba(31, 30, 30, 0.2);
+    }
+    .mylap-info .mylap-about h3,
+    .mylap-info .mylap-about h3 span {
+        letter-spacing: 2px;
+        font-size: 10pt;
+    }
+    .mylap-info .mylap-about p {
+        font-size: 7pt;
+        text-align: left;
+    }
+    .mylap-info .mylap-about .lets-social .fa {
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        font-size: 7pt;
+    }
+    .latest-tweet h3 {
+        letter-spacing: 2px;
+        font-size: 10pt;
+    }
+    .latest-tweet p {
+        font-size: 7pt;
+        text-align: left;
+    }
+    .latest-blog h3 {
+        letter-spacing: 2px;
+        font-size: 10pt;
+    }
+    .latest-blog .blog {
+        text-align: left;
+    }
+    .latest-blog .blog img {
+        width: 20%;
+    }
+    .latest-blog .blog div {
+        width: 100%;
+        margin-left: 0%
+    }
+    .latest-blog .blog p {
+        font-size: 6pt;
+    }
+}
+
+
+/* End Media Query   My Lap Info */
+
+
+/* Map */
+
+.map iframe {
+    width: 100%;
+    height: 345px;
+    margin-bottom: -1%;
+}
+
+.map-address {
+    width: 320px;
+    height: 240px;
+    background: white;
+    position: absolute;
+    margin-top: -22%;
+    margin-left: 7%;
+    border-radius: 5px;
+    opacity: 0.75;
+    padding: 1% 2%;
+    box-sizing: border-box;
+}
+
+.map-info p .fa {
+    font-weight: bold;
+    margin-right: 4%;
+}
+
+.map-info p span {
+    font-weight: bold;
+}
+
+.map-info p {
+    font-size: 10pt;
+}
+
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    height: 80px;
+    background: #212121;
+}
+
+.footer .copyright {
+    float: left;
+    line-height: 80px;
+    margin-left: 10%;
+    color: white;
+    width: 30%
+}
+
+.footer .footer-tabs {
+    float: right;
+    width: 60%;
+}
+
+.footer .footer-tabs ul {
+    margin-top: 3%;
+}
+
+.footer .footer-tabs ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 1%;
+    color: white;
+    text-align: center;
+    font-size: 11pt;
+    margin-left: 2%;
+    cursor: pointer;
+    transition: all ease-out 0.3s;
+}
+
+.footer .footer-tabs ul li:hover {
+    color: #ff9800;
+}
+
+.footer-active {
+    color: #ff9800!important;
+}
+
+
+/* Media Query To   Map & Footer */
+
+@media (min-width: 500px) and (max-width: 910px) {
+    /* Map */
+    .map-address {
+        display: none;
+    }
+    /* Footer */
+    .footer .copyright {
+        text-align: center;
+        margin-left: 0%;
+        width: 100%;
+    }
+    .footer .copyright span {
+        color: #ff9800;
+    }
+    .footer .footer-tabs {
+        display: none;
+    }
+}
+
+
+/* End Media Query Map & Footer */
