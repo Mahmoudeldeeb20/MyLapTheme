@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    //     $("html").niceScroll();
+    $("html").niceScroll();
     // Nav-Bar
     var navItem = $(".nav .right ul li a,.nav .right ul li i,.nav .left a p ,.nav .left a p span");
     $(window).on("scroll", function() {
@@ -86,12 +86,22 @@ $(document).ready(function() {
         $(this).addClass("selector-active");
         $(this).siblings().removeClass("selector-active");
     });
-    $(".group-dropdown").on("mouseenter", function() {
-        $(".search-link").slideDown(600);
+    /*
+    $(window).on("resize", function() {
+
+        if ($(window).width() > 1200) {
+            $(".group-dropdown").on("mouseenter", function() {
+                $(".search-link").slideDown(600);
+            });
+            $(".group-dropdown").on("mouseleave", function() {
+                $(".search-link").slideUp(600);
+            });
+        }
+
     });
-    $(".group-dropdown").on("mouseleave", function() {
-        $(".search-link").slideUp(600);
-    });
+*/
+
+
 
 
 
