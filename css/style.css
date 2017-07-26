@@ -9,6 +9,10 @@ body {
     overflow-x: hidden;
 }
 
+* {
+    transition: all ease-out 0.2s;
+}
+
 
 /* Navbar With Absolute Position */
 
@@ -257,7 +261,7 @@ input[type='search']:focus {
 
 @media (min-width: 500px) and (max-width: 910px) {
     .nav {
-        height: 10%;
+        height: 8%;
     }
     .left a {
         text-decoration: none;
@@ -310,13 +314,68 @@ input[type='search']:focus {
     .slider div div {
         top: 25%;
         left: 25%;
-        font-size: 9pt;
+        font-size: 7pt;
     }
     .slider div button {
-        width: 10%;
+        width: 20%;
         height: 5%;
         top: 40%;
+        left: 40%;
         font-size: 6pt;
+        margin: auto;
+    }
+}
+
+@media (max-width: 499px) {
+    .nav {
+        height: 8%;
+    }
+    .left a {
+        text-decoration: none;
+    }
+    .left a p,
+    .left a p span {
+        font-size: 10pt;
+    }
+    .right {
+        display: none;
+    }
+    .nav-bar {
+        width: 100%;
+    }
+    .nav-search {
+        display: none;
+    }
+    .search {
+        display: none;
+    }
+    .header {
+        z-index: -1;
+    }
+    .slider {
+        height: 150px;
+    }
+    .slider div p {
+        top: 4%;
+        font-size: 10pt;
+    }
+    .slider div p span {
+        font-weight: bolder;
+    }
+    .slider div h2 {
+        top: 7%;
+        font-size: 12pt;
+    }
+    .slider div div {
+        top: 15%;
+        width: 90%;
+        left: 5%;
+        text-align: center;
+        margin: auto;
+        font-size: 6pt;
+    }
+    .slider div button {
+        display: none;
     }
 }
 
@@ -406,11 +465,39 @@ input[type='search']:focus {
         line-height: 10px;
     }
     .web-specification div p {
-        font-size: 10pt;
+        font-size: 9pt;
     }
     .web-specification div span {
         font-size: 7pt;
         margin-bottom: 5%;
+    }
+    .web-specification div a {
+        font-size: 8pt;
+    }
+}
+
+@media (max-width: 499px) {
+    .web-specification {
+        min-height: 170px;
+    }
+    .web-specification div {
+        width: 100%;
+        display: block;
+    }
+    .web-specification div section {
+        width: 30px;
+        height: 30px;
+    }
+    .web-specification div section i {
+        font-size: 10pt;
+        line-height: 0px;
+    }
+    .web-specification div p {
+        font-size: 9pt;
+    }
+    .web-specification div span {
+        font-size: 7pt;
+        margin-bottom: 2%;
     }
     .web-specification div a {
         font-size: 8pt;
@@ -626,6 +713,45 @@ input[type='search']:focus {
     }
 }
 
+@media (max-width: 499px) {
+    .portfolio-header h1 {
+        font-size: 12pt;
+    }
+    .portfolio-header p {
+        font-size: 7pt;
+        width: 90%;
+    }
+    .portfolio-category .selector ul {
+        padding: 0;
+    }
+    .selector ul li {
+        font-size: 7pt;
+        width: 100%;
+        margin: 1%;
+        padding: 0;
+    }
+    .selector ul li:hover {
+        border-bottom: 2px solid transparent;
+    }
+    .selector-active:hover {
+        border-bottom: 2px solid transparent !important;
+    }
+    .images {
+        height: auto;
+        width: 100%;
+        float: left;
+    }
+    .search-link {
+        display: none;
+    }
+    .search-link i {
+        display: none;
+    }
+    .portfolio-category a {
+        display: none;
+    }
+}
+
 
 /* End Media Query Our Portfolio */
 
@@ -714,9 +840,29 @@ input[type='search']:focus {
         font-size: 10pt;
     }
     .cover-two div div button {
-        width: 11%;
+        width: 20%;
         height: 30px;
         font-size: 9pt;
+    }
+}
+
+@media (max-width: 499px) {
+    .cover-two {
+        height: 170px;
+    }
+    .cover-two .overlay {
+        background: rgba(33, 33, 33, 1);
+    }
+    .cover-two img {
+        margin-top: -63%;
+        opacity: 0.4;
+    }
+    .overlay div p {
+        font-size: 9pt;
+        width: 90%;
+    }
+    .cover-two div div button {
+        display: none;
     }
 }
 
@@ -806,6 +952,36 @@ input[type='search']:focus {
     .news-images {
         width: 70%;
         height: 18em;
+    }
+    .news-images img:hover {
+        opacity: 0.2;
+    }
+    .news-images div span {
+        font-size: 8pt;
+    }
+    .news-images div p {
+        font-size: 8pt;
+    }
+}
+
+@media (max-width:499px) {
+    .latest-news h2 {
+        font-size: 12pt;
+    }
+    .latest-news p {
+        font-size: 8pt;
+        margin: 2% auto;
+        width: 90%;
+    }
+    .news-images div {
+        display: block;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    .news-images {
+        width: 90%;
+        height: 50em;
     }
     .news-images img:hover {
         opacity: 0.2;
@@ -957,6 +1133,46 @@ input[type='search']:focus {
     }
 }
 
+@media (max-width: 499px) {
+    .our-team {
+        background: transparent;
+    }
+    .team-header h1 {
+        font-size: 15pt;
+    }
+    .team-header p {
+        font-size: 9pt;
+        width: 90%;
+    }
+    .team-members .member {
+        display: block;
+        width: 100%;
+    }
+    .team-members .member .member-img img {
+        width: 70%;
+        height: 70%;
+    }
+    .team-members .member .member-img .content {
+        display: none;
+        background: transparent;
+    }
+    .content p {
+        display: none;
+    }
+    .content .fa {
+        display: none;
+    }
+    .content .fa:hover {
+        display: none;
+    }
+    .team-members .member span {
+        font-size: 9pt;
+    }
+    .team-members .member p {
+        font-size: 8pt;
+    }
+}
+
 
 /* End Media Query Our Team */
 
@@ -1028,6 +1244,25 @@ input[type='search']:focus {
     }
     .skills-progress {
         width: 90%;
+    }
+}
+
+@media (max-width: 499px) {
+    .skills .header {
+        width: 80%;
+    }
+    .skills .header h1 {
+        font-size: 15pt;
+    }
+    .skills .header p {
+        font-size: 8pt;
+    }
+    .skills-progress {
+        width: 90%;
+    }
+    .skills-progress section {
+        display: block;
+        width: 100%;
     }
 }
 
@@ -1110,6 +1345,37 @@ input[type='search']:focus {
     }
     .statues .statues-result span {
         font-size: 7pt;
+        display: block;
+        text-align: center
+    }
+}
+
+@media (max-width: 499px) {
+    .statues {
+        width: 100%;
+        padding: 3% 6%;
+        box-sizing: border-box;
+    }
+    .statues section {
+        /* display: block !important; */
+        width: 45% !important;
+        margin: 2% !important;
+        text-align: left !important;
+    }
+    .statues .statues-result i {
+        font-size: 13pt;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+    .statues .statues-result h3 {
+        font-size: 7pt;
+        margin: 2% 0;
+        text-align: left;
+        letter-spacing: 0;
+    }
+    .statues .statues-result span {
+        font-size: 6pt;
         display: block;
         text-align: center
     }
@@ -1215,6 +1481,47 @@ input[type='search']:focus {
     }
 }
 
+@media (max-width: 499px) {
+    .our-team-two .header {
+        margin: 0 auto;
+        width: 80%;
+    }
+    .our-team-two .header h1 {
+        letter-spacing: 1px;
+        font-size: 13pt;
+    }
+    .our-team-two .header p {
+        font-size: 8pt;
+        width: 100%;
+    }
+    .our-team-two .quotes {
+        box-sizing: border-box;
+        padding: 2%;
+        display: block;
+        width: 90%;
+        background: rgba(179, 229, 252, 0.1)
+    }
+    .our-team-two .quotes h1 {
+        font-size: 30pt;
+    }
+    .our-team-two .quotes p {
+        font-size: 8pt;
+    }
+    .quotes-img {
+        background: rgba(179, 229, 252, 0.4);
+    }
+    .our-team-two .quotes .quotes-img img {
+        width: 20%;
+    }
+    .our-team-two .quotes .quotes-img div h3 {
+        letter-spacing: 1px;
+        font-size: 11pt;
+    }
+    .our-team-two .quotes .quotes-img div p {
+        font-size: 9pt;
+    }
+}
+
 
 /* End Media Query Our Team Two */
 
@@ -1293,6 +1600,27 @@ input[type='search']:focus {
     }
     .our-customers .header p {
         font-size: 8pt;
+    }
+}
+
+@media (max-width: 499px) {
+    .our-customers {
+        height: 250px;
+    }
+    .our-customers .header {
+        margin: 0 auto;
+        width: 90%;
+        margin-top: 22%;
+    }
+    .our-customers .header h1 {
+        font-size: 15pt;
+    }
+    .our-customers .header p {
+        font-size: 8pt;
+        width: 100%;
+    }
+    .our-customers .brand {
+        display: none;
     }
 }
 
@@ -1470,6 +1798,60 @@ input[type='search']:focus {
     }
 }
 
+@media (max-width: 499px) {
+    .mylap-info section {
+        display: block;
+        width: 90%;
+    }
+    .mylap-info section:hover {
+        background: rgba(45, 44, 44, 0.5);
+        border: 1px inset rgba(31, 30, 30, 0.2);
+    }
+    .mylap-info .mylap-about h3,
+    .mylap-info .mylap-about h3 span {
+        letter-spacing: 2px;
+        font-size: 10pt;
+    }
+    .mylap-info .mylap-about p {
+        font-size: 7pt;
+        text-align: left;
+    }
+    .mylap-info .mylap-about .lets-social .fa {
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        font-size: 7pt;
+    }
+    .latest-tweet h3 {
+        letter-spacing: 2px;
+        font-size: 10pt;
+    }
+    .latest-tweet p {
+        font-size: 7pt;
+        text-align: left;
+    }
+    .latest-blog h3 {
+        letter-spacing: 2px;
+        font-size: 10pt;
+    }
+    .latest-blog .blog {
+        text-align: left;
+        margin: 2%;
+    }
+    .latest-blog .blog img {
+        width: 10%;
+        display: inline-block;
+    }
+    .latest-blog .blog div {
+        width: 70%;
+        margin-left: 0%;
+        display: inline-block;
+    }
+    .latest-blog .blog p {
+        font-size: 6pt;
+    }
+}
+
 
 /* End Media Query   My Lap Info */
 
@@ -1558,6 +1940,25 @@ input[type='search']:focus {
 /* Media Query To   Map & Footer */
 
 @media (min-width: 500px) and (max-width: 910px) {
+    /* Map */
+    .map-address {
+        display: none;
+    }
+    /* Footer */
+    .footer .copyright {
+        text-align: center;
+        margin-left: 0%;
+        width: 100%;
+    }
+    .footer .copyright span {
+        color: #ff9800;
+    }
+    .footer .footer-tabs {
+        display: none;
+    }
+}
+
+@media (max-width: 499px) {
     /* Map */
     .map-address {
         display: none;
